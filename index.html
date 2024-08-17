@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyNavigator Flights</title>
+    
+    <!-- poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1><box-icon name='plane-alt' color='#f0a500'></box-icon> SkyNavigator Flights</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#book"><box-icon name='calendar'></box-icon> Book a Flight</a></li>
+                <li><a href="#about"><box-icon name='info-circle'></box-icon> About</a></li>
+                <li><a href="#contact"><box-icon name='phone'></box-icon> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- booking section -->
+    <section id="book" class="booking-section">
+        <div class="container">
+            <h2>Book Your Flight</h2>
+            <form id="booking-form" class="booking-form">
+                <div class="form-group autocomplete">
+                    <label for="from">From:</label>
+                    <input type="text" id="from" name="from" placeholder="Enter Departure City">
+                    <span id="from-error" class="error-message">* This box is required</span>
+                </div>
+                <div class="form-group autocomplete">
+                    <label for="to">To:</label>
+                    <input type="text" id="to" name="to" placeholder="Enter Destination City">
+                    <span id="to-error" class="error-message">* This box is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="departure">Departure Date:</label>
+                    <input type="date" id="departure" name="departure">
+                    <span id="departure-error" class="error-message">* This box is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="return">Return Date:</label>
+                    <input type="date" id="return" name="return">
+                    <span id="return-error" class="error-message">* This box is required</span>
+                </div>
+                <button type="button" id="search-flights" class="btn-primary"><box-icon name='search-alt'></box-icon> Search Flights</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section id="about" class="info-section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <box-icon name='check-shield' color='#f0a500' size='lg'></box-icon>
+                    <h3>Reliable Service</h3>
+                    <p>We ensure all bookings are reliable and efficient, making your journey stress-free.</p>
+                </div>
+                <div class="info-card">
+                    <box-icon name='money' color='#f0a500' size='lg'></box-icon>
+                    <h3>Affordable Prices</h3>
+                    <p>Get the best prices on all flights, without compromising on quality or comfort.</p>
+                </div>
+                <div class="info-card">
+                    <box-icon name='support' color='#f0a500' size='lg'></box-icon>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="" class="" disabled>Send Message </button>
+            </form>
+        </div>
+
+        
+    </section>
+
+    <!-- flight results popup -->
+    <div id="flight-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Available Flights</h2>
+            <div class="flight-results"></div>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+<div id="checkout-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="month" id="expiry-date" name="expiry-date" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <button type="submit" class="btn">Complete Purchase</button>
+        </form>
+    </div>
+</div>
+
+    <!-- success popup -->
+    <div id="success-modal" class="success-modal">
+        <div class="success-modal-content">
+            <span class="success-close-button">&times;</span>
+            <h2>Successfully Booked!</h2>
+            <p class="success-message">Your flight has been successfully booked.</p>
+            <button class="btn-ok">OK</button>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <p>SkyNavigator, the best airplane-booking website</a></p>
+    </footer>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

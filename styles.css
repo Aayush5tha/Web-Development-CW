@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; 
+}
+
+.navbar {
+    background-color: #003366;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #004080;
+    color: #ffffff;
+}
+
+.booking-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #003366;
+}
+
+.booking-form {
+    background: #f9faff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.booking-form .form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.booking-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #003366;
+}
+
+.booking-form .form-group input,
+.booking-form .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 180px;
+    overflow-y: auto;
+    width: calc(100% - 28px); 
+    top: calc(100% + 8px); 
+    left: 14px; 
+    z-index: 10;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f4f8;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #004080;
+    transform: scale(1.02);
+}
+
+.info-section {
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+    font-size: 18px;
+}
+
+.info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.info-card h3 {
+    margin-top: 10px;
+    color: #003366;
+    font-size: 24px;
+}
+
+.info-card p {
+    color: #777;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.contact-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f9faff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #003366;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 160px;
+}
+
+.contact-form button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    cursor: not-allowed;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #004080;
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer-info {
+    font-size: 16px;
+}
+
+.footer-info a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .booking-section h2, .info-section h2, .contact-section h2 {
+        font-size: 24px;
+    }
+
+    .booking-form, .contact-form {
+        padding: 20px;
+    }
+
+    .info-card {
+        max-width: 100%;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.flight-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flight-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.flight-item:hover {
+    background-color: #f1f1f1;
+}
+
+.flight-item img {
+    width: 120px; 
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.flight-details p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.flight-details strong {
+    color: #007bff;
+}
+
+.btn-buy {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-buy:hover {
+    background-color: #004080;
+    transform: scale(1.05);
+}
+
+
+.success-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-modal-content {
+    background-color: #ffffff;
+    margin: 20% auto; 
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; 
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+}
+
+.success-close-button {
+    color: #aaa;
+    float: right;
+    font-size: 24px; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.success-close-button:hover {
+    color: #000;
+}
+
+.success-message {
+    margin: 20px 0;
+    font-size: 16px; 
+    color: #333;
+}
+
+.btn-ok {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ok:hover {
+    background-color: #0056b3;
+}
+
+/* Checkout Modal Styling */
+#checkout-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+#checkout-modal .modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+#checkout-modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#checkout-modal .close-button:hover,
+#checkout-modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#checkout-modal .form-group {
+    margin-bottom: 15px;
+}
+
+#checkout-modal .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#checkout-modal .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#checkout-modal .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#checkout-modal .btn:hover {
+    background-color: #45a049;
+}
